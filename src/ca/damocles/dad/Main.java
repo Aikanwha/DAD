@@ -1,30 +1,22 @@
 package ca.damocles.dad;
 
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
 
 	@Override
 	public void onEnable() {
+		System.out.println("DAD is started up!");
 		
+		this.getCommand("hello").setExecutor(new CommandHello());
 	}
 	
 	@Override
 	public void onDisable() {
-		
+		System.out.println("DAD is now turned off!");
 	}
 	
-	@Override
-	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-		if(command.getName().equalsIgnoreCase("hello")) {
-			sender.sendMessage("Hello " + sender.getName() + "!");
-			return true;
-		}
-		
-		return false;
-	}
+	
 	
 	
 }

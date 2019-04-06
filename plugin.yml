@@ -1,9 +1,11 @@
-main: tld.example.myplugin.Main
+main: ca.damocles.dad.Main
 name: DAD
 version: 0.1
 author: Dalton W.
-description: A plugin inspired by my D (A)nd D sessions.
+description: A plugin inspired by my D&D sessions.
 commands:
   hello:
     description: says hello to the server.
     usage: /hello
+    permission: dad.hello
+    permission-message: You are unable to say hello!
